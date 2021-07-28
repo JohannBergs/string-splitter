@@ -39,3 +39,16 @@ def test_java_result_java():
     # assert
     assert result == expResult
 
+def test_java_python_result_java_python():
+    # arrange
+    stringToSplit = "java, python"
+    expResult = ["java", "python"]
+    result = None
+    cut = TagManipulator()
+    
+    # act
+    result = cut.parse_string(stringToSplit)
+    
+    # assert
+    assert result == expResult
+
